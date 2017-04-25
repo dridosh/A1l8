@@ -1,21 +1,21 @@
 package ru.rsfera.a1l8;
 
-public class DataModul {
+public class DataModule {
 
     private String title;
     private String description;
     private int imageId;
 
 
-    public DataModul(String title, String description, int imageId) {
+    public DataModule(String title, String description, int imageId) {
         this.title = title;
         this.description = description;
         this.imageId = imageId;
     }
 
-    public final static DataModul[] Exercises = {
-            new DataModul("test", "description", R.drawable.boat),
-            new DataModul("test2", "description2", R.drawable.jumping)
+    public final static DataModule[] Exercises = {
+            new DataModule("test", "description", R.drawable.boat),
+            new DataModule("test2", "description2", R.drawable.jumping)
     };
 
     public String getTitle() {
