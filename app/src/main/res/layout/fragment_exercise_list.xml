@@ -9,8 +9,9 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:choiceMode="singleChoice"
-        android:background="#5800eaff" >
+        android:background="#ffffff">
     </ListView>
+
 
     <TextView
         android:id="@id/android:empty"
