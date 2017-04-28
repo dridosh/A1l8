@@ -17,17 +17,19 @@ public class Exercise {
         this.imageNOKID = imageNOKID;
     }
 
-    public final static Exercise[] Exercises = {
-            new Exercise(R.string.simple_plank_title, R.string.simple_plank_des,
-                    R.drawable.i_simple_plank_ok, R.drawable.i_simple_plan_nok),
+    public final static Exercise[] exercises = {
             new Exercise(R.string.classic_plank_title, R.string.classic_plank_des,
                     R.drawable.i_classic_plank_ok, R.drawable.i_classic_plank_nok),
+            new Exercise(R.string.simple_plank_title, R.string.simple_plank_des,
+                    R.drawable.i_simple_plank_ok, R.drawable.i_simple_plan_nok),
             new Exercise(R.string.side_plank_title, R.string.side_plank_des,
                     R.drawable.i_side_plank_ok, R.drawable.i_side_plank_nok),
             new Exercise(R.string.leg_plank_title, R.string.leg_plank_des,
-                    R.drawable.i_leg_plank_ok, 0)
-
+                    R.drawable.i_leg_plank_ok, 0),
+            new Exercise(R.string.hand_plank_title, R.string.hand_plank_des,
+                    0, 0)
     };
+
 
     public int getTitleID() {
         return titleID;
@@ -44,5 +46,6 @@ public class Exercise {
     public int getImageNOKID() {
         return imageNOKID;
     }
+
 }
 

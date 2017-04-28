@@ -7,5 +7,12 @@
     android:orientation="vertical"
     tools:context="ru.rsfera.a1l8.MainActivity">
 
+    <fragment
+        android:id="@+id/list_execises"
+        android:name="ru.rsfera.a1l8.fragments.ExerciseListFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout="@android:layout/list_content">
+    </fragment>
 
 </LinearLayout>

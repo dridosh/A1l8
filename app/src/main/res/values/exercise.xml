@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="simple_plank_title">планка на прямых рукахk</string>
+
+    <string name="classic_plank_title">Классическая планка</string>
+    <string name="classic_plank_des">Классическая планка</string>
+
+    <string name="simple_plank_title">Планка на прямых руках</string>
     <string name="simple_plank_des">Ступни вместе,
 Ноги прямые и напряженные
 Ягодицы напряжены до окончания подхода.
@@ -14,11 +18,6 @@
 Ногу поднять вверх чуть выше плеч
 Пальцы поднятой ноги тянем на себя</string>
 
-
-
-    <string name="classic_plank_title">Классическая планка</string>
-    <string name="classic_plank_des">Классическая планка</string>
-
     <string name="side_plank_title">Боковая планка</string>
     <string name="side_plank_des">Боковая планка</string>
 
@@ -27,4 +26,5 @@
 
     <string name="hand_plank_title">Планка с поднятой рукой</string>
     <string name="hand_plank_des">Планка с поднятой рукой</string>
+
 </resources>
