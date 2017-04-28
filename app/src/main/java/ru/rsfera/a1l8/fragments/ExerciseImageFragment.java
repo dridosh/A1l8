@@ -1,4 +1,4 @@
-package ru.rsfera.a1l8;
+package ru.rsfera.a1l8.fragments;
 
 
 import android.os.Bundle;
@@ -7,11 +7,16 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import ru.rsfera.a1l8.R;
 
-public class ExerciseTitleAndImageFragment extends Fragment {
+
+/**
+ * A simple {@link Fragment} subclass.
+ */
+public class ExerciseImageFragment extends Fragment {
 
 
-    public ExerciseTitleAndImageFragment() {
+    public ExerciseImageFragment() {
         // Required empty public constructor
     }
 
@@ -20,7 +25,7 @@ public class ExerciseTitleAndImageFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_exercise_title_and_image, container, false);
+        return inflater.inflate(R.layout.fragment_exercise_image, container, false);
     }
 
 }
