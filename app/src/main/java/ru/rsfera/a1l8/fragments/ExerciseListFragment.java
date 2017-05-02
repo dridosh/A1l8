@@ -16,14 +16,15 @@ public class ExerciseListFragment extends ListFragment {
     @Override
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-        String[] titles;
-        titles = new String[Exercise.exercises.length];
+
+        String[] exercisesTitle;
+        exercisesTitle = new String[Exercise.exercises.length];
         for (int i = 0; i < Exercise.exercises.length; i++) {
-            titles[i] = getString(Exercise.exercises[i].getTitleID());
+            exercisesTitle[i] = getString(Exercise.exercises[i].getTitleID());
         }
 
         ArrayAdapter<String> adapter = new ArrayAdapter<>(getActivity(),
-                android.R.layout.simple_list_item_activated_1 , titles);
+                android.R.layout.simple_list_item_activated_1 , exercisesTitle);
        // android.R.layout.android.simple_expandable_list_item_1
         setListAdapter(adapter);
     }

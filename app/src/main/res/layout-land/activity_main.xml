@@ -1,11 +1,74 @@
 <?xml version="1.0" encoding="utf-8"?>
+
+
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
+    android:orientation="horizontal"
+    android:baselineAligned="true"
     tools:context="ru.rsfera.a1l8.MainActivity">
 
+   <fragment
+       android:id="@+id/exercise_list_fragment"
+       class="ru.rsfera.a1l8.fragments.ExerciseListFragment"
+       android:layout_width="0dp"
+       android:layout_height="match_parent"
+       android:layout_weight="2"/>
+
+
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_weight="7">
+
+
+            <fragment
+                android:id="@+id/fragment_exercise_title"
+                class="ru.rsfera.a1l8.fragments.ExerciseTitleFragment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:baselineAligned="false">
+
+                    <fragment
+                        android:id="@+id/fragment_exercise_description"
+                        class="ru.rsfera.a1l8.fragments.ExerciseDescriptionFragment"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:layout_weight="1">
+
+                        <fragment
+                            android:id="@+id/fragment_exercise_image"
+                            class="ru.rsfera.a1l8.fragments.ExerciseImageFragment"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1" />
+
+                        <fragment
+                            android:id="@+id/fragment_exercise_stopwatch"
+                            class="ru.rsfera.a1l8.fragments.ExerciseStopwatchFragment"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1" />
+                    </LinearLayout>
+
+
+                </LinearLayout>
+    </LinearLayout>
 
 </LinearLayout>

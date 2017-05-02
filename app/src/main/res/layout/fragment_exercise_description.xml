@@ -4,10 +4,11 @@
     android:layout_height="match_parent"
     tools:context="ru.rsfera.a1l8.fragments.ExerciseDescriptionFragment">
 
-    <!-- TODO: Update blank fragment layout -->
     <TextView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="cnhjrjds[ " />
+        android:layout_margin="5dp"
+        android:gravity="top"
+        android:text="@string/classic_plank_des" />
 
 </FrameLayout>
