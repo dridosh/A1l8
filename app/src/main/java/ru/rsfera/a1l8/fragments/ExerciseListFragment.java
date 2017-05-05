@@ -4,10 +4,12 @@ package ru.rsfera.a1l8.fragments;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.v4.app.ListFragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.ListView;
 
 import ru.rsfera.a1l8.AdapterForExerciseList;
 import ru.rsfera.a1l8.R;
@@ -17,6 +19,7 @@ public class ExerciseListFragment extends ListFragment {
 
     AdapterForExerciseList adapter;
     int[] progress;
+    ListView list;
 
     @Override
     public void onActivityCreated(Bundle savedInstanceState) {
@@ -56,15 +59,22 @@ public class ExerciseListFragment extends ListFragment {
                 exercisesTime, exercisesTitle, exercisesImage,progress);
 
         setListAdapter(adapter);
+        list=getListView();
     }
 
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        runTimer();
-        return inflater.inflate(R.layout.fragment_exercise_list, null);
 
+         return inflater.inflate(R.layout.fragment_exercise_list, null);
+
+    }
+
+    @Override
+    public void onStart() {
+        super.onStart();
+        runTimer();
     }
 
     private void runTimer() {
@@ -74,6 +84,16 @@ public class ExerciseListFragment extends ListFragment {
             public void run() {
               if (progress[0] <100) {progress[0]++;}
                adapter.notifyDataSetChanged();
+
+           //    if (getListView() !=null){
+          //         setSelection(5);
+           //    }
+
+            //    setSelection(getSelectedItemPosition()+1);
+            //    Log.d("22222222", "run: "+getSelectedItemPosition());
+
+              // list.setSelection();
+
                handler.postDelayed(this, 1000);
             }
         });

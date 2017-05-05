@@ -1,31 +1,26 @@
 package ru.rsfera.a1l8.datamodule;
 
-import android.content.Context;
 import android.os.Handler;
 import android.support.v4.app.Fragment;
 import android.util.Log;
-import android.view.View;
-
-import ru.rsfera.a1l8.MainActivity;
-import ru.rsfera.a1l8.fragments.ExerciseStopwatchFragment;
 
 
 public class Stopwatch {
 
-    private static Stopwatch stopwhatch;
-    private static int ms=0;
+    private static Stopwatch stopwatch;
+    private int ms = 0;
+
+
     private boolean isRunning = true;
 
-    private StopwatchListener listener;
+    private static StopwatchListener listener;
 
-    public interface StopwatchListener{
+    public interface StopwatchListener {
         void onTact();
     }
 
 
-
-
-    public static int getMs() {
+    public int getMs() {
         return ms;
     }
 
@@ -38,34 +33,41 @@ public class Stopwatch {
         isRunning = false;
     }
 
-    public void reset(){
-        ms=0;
+    public void reset() {
+        ms = 0;
     }
 
+    public boolean isRunning() {
+        return isRunning;
+    }
 
-
-    private Stopwatch(Fragment fragment){
-        listener= (StopwatchListener) fragment;
-
-
+    private Stopwatch() {
 
     }
-    public static void runTimer(Fragment fragment) {
-        if (stopwhatch == null) {
-            stopwhatch = new Stopwatch(fragment);
 
-            stopwhatch.runing();
+    public static Stopwatch getStopwatch(Fragment fragment) {
+        if (stopwatch == null) {
+            synchronized (Stopwatch.class) {
+                stopwatch = new Stopwatch();
+                stopwatch.runing();
+            }
         }
+
+        if (stopwatch != null) {
+            listener = (StopwatchListener) fragment;
+
+        }
+        return stopwatch;
     }
 
-     private void  runing(){
-     final Handler handler = new Handler();
+    private void runing() {
+        final Handler handler = new Handler();
         handler.post(new Runnable() {
             @Override
             public void run() {
-                ms++;
-              //  if (ms%100==0){
-                if (listener !=null) {
+                if (isRunning) ms++;;
+                //  if (ms%100==0){
+                if (listener != null) {
                     listener.onTact();
                 }
                 Log.d("1234567", "run:listner.onStopwatchTact ");

@@ -9,10 +9,22 @@
 
     <fragment
         android:id="@+id/list_exercises"
-        android:name="ru.rsfera.a1l8.fragments.ExerciseListFragment"
+        class="ru.rsfera.a1l8.fragments.ExerciseListFragment"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:layout="@android:layout/list_content">
+        android:layout_height="0dp"
+        tools:layout="@android:layout/list_content"
+        android:layout_weight="9">
+
     </fragment>
+    <!---->
+    <fragment
+        android:id="@+id/watch_exercises"
+        class="ru.rsfera.a1l8.fragments.WatchFragment"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+    </fragment>
+
+
 
 </LinearLayout>

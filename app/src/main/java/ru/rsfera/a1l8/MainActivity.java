@@ -17,22 +17,6 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
 
-    @Override
-    public View onCreateView(View parent, String name, Context context, AttributeSet attrs) {
-        return super.onCreateView(parent, name, context, attrs);
-
-    }
-
-    @Override
-    public View onCreateView(String name, Context context, AttributeSet attrs) {
-
-        return super.onCreateView(name, context, attrs);
-    }
-
-    @Override
-    protected void onStart() {
-        super.onStart();
-    }
 
 
 }
